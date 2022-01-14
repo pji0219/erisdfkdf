@@ -3,10 +3,25 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
 // 스타일
-const CarouselItem = styled.li<{ activeIdx: number }>`
-  /* outline: none; */
-  background-color: skyblue;
+const CarouselList = styled.ul`
+  width: auto;
+  display: flex;
+  justify-content: center;
+  /* position: relative; */
+  overflow: hidden;
+  list-style: none;
 
+  @media all and (min-width: 1200px) {
+    height: 300px;
+  }
+
+  @media all and (max-width: 1199px) {
+    height: 281.94px;
+  }
+`;
+
+const CarouselItem = styled.li<{ activeIdx: number }>`
+  flex: 1 0 50%;
   transform: translateX(-${({ activeIdx }) => activeIdx * 100}%);
   transition: 200ms ease;
 
@@ -16,7 +31,7 @@ const CarouselItem = styled.li<{ activeIdx: number }>`
   }
 
   & {
-    margin-right: 20px;
+    margin: 0 15px;
   }
 
   @media all and (min-width: 1200px) {
@@ -40,155 +55,292 @@ const CarouselItem = styled.li<{ activeIdx: number }>`
   }
 `;
 
-const CarouselList = styled.ul`
-  background-color: blue;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  box-sizing: border-box;
-
-  @media all and (min-width: 1200px) {
-    height: 300px;
-  }
-
-  @media all and (max-width: 1199px) {
-    height: 281.94px;
-  }
-`;
-
 const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
   @media all and (min-width: 1200px) {
     position: absolute;
-    top: 100px;
+    top: 130px;
     z-index: 1;
-    padding: 8px 12px;
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 16px;
     background-color: transparent;
-    color: #fff;
     border: none;
     margin: 0;
     cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
     ${({ position }) =>
       position === 'left'
         ? css`
-            left: 0;
+            left: 260px;
           `
         : css`
-            right: 0;
+            right: 220px;
+          `}
+  }
+
+  @media all and (min-width: 1222px) {
+    position: absolute;
+    top: 130px;
+    z-index: 1;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
+    ${({ position }) =>
+      position === 'left'
+        ? css`
+            left: 265px;
+          `
+        : css`
+            right: 230px;
+          `}
+  }
+
+  @media all and (min-width: 1277px) {
+    position: absolute;
+    top: 130px;
+    z-index: 1;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
+    ${({ position }) =>
+      position === 'left'
+        ? css`
+            left: 275px;
+          `
+        : css`
+            right: 240px;
+          `}
+  }
+
+  @media all and (min-width: 1310px) {
+    position: absolute;
+    top: 130px;
+    z-index: 1;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
+    ${({ position }) =>
+      position === 'left'
+        ? css`
+            left: 285px;
+          `
+        : css`
+            right: 245px;
+          `}
+  }
+
+  @media all and (min-width: 1335px) {
+    position: absolute;
+    top: 130px;
+    z-index: 1;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
+    ${({ position }) =>
+      position === 'left'
+        ? css`
+            left: 290px;
+          `
+        : css`
+            right: 250px;
+          `}
+  }
+
+  @media all and (min-width: 1368px) {
+    position: absolute;
+    top: 130px;
+    z-index: 1;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
+    ${({ position }) =>
+      position === 'left'
+        ? css`
+            left: 310px;
+          `
+        : css`
+            right: 270px;
           `}
   }
 
   @media all and (min-width: 1400px) {
     position: absolute;
-    top: 100px;
+    top: 130px;
     z-index: 1;
-    padding: 8px 12px;
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 16px;
     background-color: transparent;
-    color: #fff;
     border: none;
     margin: 0;
     cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
     ${({ position }) =>
       position === 'left'
         ? css`
-            left: 50px;
+            left: 310px;
           `
         : css`
-            right: 25px;
+            right: 270px;
           `}
   }
 
   @media all and (min-width: 1500px) {
     position: absolute;
-    top: 100px;
+    top: 130px;
     z-index: 1;
-    padding: 8px 12px;
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 16px;
     background-color: transparent;
-    color: #fff;
     border: none;
     margin: 0;
     cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
     ${({ position }) =>
       position === 'left'
         ? css`
-            left: 85px;
+            left: 330px;
           `
         : css`
-            right: 65px;
+            right: 295px;
           `}
   }
 
   @media all and (min-width: 1534px) {
     position: absolute;
-    top: 100px;
+    top: 130px;
     z-index: 1;
-    padding: 8px 12px;
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 16px;
     background-color: transparent;
-    color: #fff;
     border: none;
     margin: 0;
     cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
     ${({ position }) =>
       position === 'left'
         ? css`
-            left: 120px;
+            left: 340px;
           `
         : css`
-            right: 80px;
+            right: 305px;
           `}
   }
 
   @media all and (min-width: 1600px) {
     position: absolute;
-    top: 100px;
+    top: 130px;
     z-index: 1;
-    padding: 8px 12px;
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 16px;
     background-color: transparent;
-    color: #fff;
     border: none;
     margin: 0;
     cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
     ${({ position }) =>
       position === 'left'
         ? css`
-            left: 150px;
+            left: 360px;
           `
         : css`
-            right: 110px;
+            right: 320px;
           `}
   }
 
   @media all and (min-width: 1669px) {
     position: absolute;
-    top: 100px;
+    top: 130px;
     z-index: 1;
-    padding: 8px 12px;
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 16px;
     background-color: transparent;
-    color: #fff;
     border: none;
     margin: 0;
     cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
     ${({ position }) =>
       position === 'left'
         ? css`
-            left: 180px;
+            left: 380px;
           `
         : css`
-            right: 140px;
+            right: 340px;
+          `}
+  }
+
+  @media all and (min-width: 1900px) {
+    position: absolute;
+    top: 130px;
+    /* z-index: 1; */
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    background: #e0e0e0;
+    ${({ position }) =>
+      position === 'left'
+        ? css`
+            left: 440px;
+          `
+        : css`
+            right: 400px;
           `}
   }
 `;
@@ -210,28 +362,53 @@ const banners = [
 
 const Carousel: React.FC = () => {
   const [activeIdx, setActiveIdx] = useState<number>(0);
-  const [isFocused, setIsFocused] = useState<boolean>(false);
 
   // 이전 배너로 가기
-  const handPrev = () => {
-    setActiveIdx((prev) => prev - 1 + banners.length);
+  const handlePrev = () => {
+    setActiveIdx((prev) => prev - 1);
   };
 
   // 다음 배너로 가기
-  const handNext = () => {
+  const handleNext = () => {
     // 배너의 길이 만큼 나누고 나머지를 구하는 이유는 맨 마지막 배너까지 갔을 때 다음 버튼을 눌러서 처음 배너로 가기 위해서
     setActiveIdx((prev) => (prev + 1) % banners.length);
   };
 
   return (
     <CarouselList>
-      <ArrowButton position="left">버튼</ArrowButton>
+      <ArrowButton onClick={handlePrev} position="left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="SvgIcon_SvgIcon__root__svg__DKYBi"
+          viewBox="0 0 18 18"
+          width="18"
+          height="18"
+        >
+          <path
+            d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"
+            fill="#333333"
+          ></path>
+        </svg>
+      </ArrowButton>
       {banners.map((banner, idx) => (
         <CarouselItem key={idx} activeIdx={activeIdx}>
           <img src={banner} alt="banner" />
         </CarouselItem>
       ))}
-      <ArrowButton position="right">버튼</ArrowButton>
+      <ArrowButton onClick={handleNext} position="right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="SvgIcon_SvgIcon__root__svg__DKYBi"
+          viewBox="0 0 18 18"
+          width="18"
+          height="18"
+        >
+          <path
+            d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"
+            fill="#333333"
+          ></path>
+        </svg>
+      </ArrowButton>
     </CarouselList>
   );
 };
