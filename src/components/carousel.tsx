@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
 // 스타일
+// 캐러셀 컨테이너
 const CarouselList = styled.ul`
   width: auto;
   display: flex;
@@ -19,6 +20,7 @@ const CarouselList = styled.ul`
   }
 `;
 
+// 배너
 const CarouselItem = styled.li<{ activeIdx: number }>`
   flex: 1 0 50%;
   transform: translateX(-${({ activeIdx }) => activeIdx * 100}%);
@@ -54,6 +56,7 @@ const CarouselItem = styled.li<{ activeIdx: number }>`
   }
 `;
 
+// 배너 제목 및 설명
 const CarouselTitle = styled.div`
   position: absolute;
   bottom: 28px;
@@ -64,12 +67,12 @@ const CarouselTitle = styled.div`
   text-align: left;
   left: 34px;
 
-  > h3 {
+  > .title {
     margin-left: 15px;
     color: #333333;
   }
 
-  > p {
+  > .decription {
     margin-left: 15px;
     font-size: 14px;
     color: #333333;
@@ -82,7 +85,11 @@ const CarouselTitle = styled.div`
     background-color: #ececec;
   }
 
-  > span {
+  > .link {
+    text-decoration: none;
+  }
+
+  > .link > span {
     margin-top: 15px;
     color: #3366ff;
     font-size: 14px;
@@ -103,6 +110,21 @@ const CarouselTitle = styled.div`
     left: 0;
   }
 
+  > .link {
+    text-decoration: none;
+  }
+
+  > .link > span {
+    margin-top: 15px;
+    color: #3366ff;
+    font-size: 14px;
+    margin-left: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+
   @media all and (max-width: 456px) {
     position: absolute;
     bottom: 0;
@@ -112,13 +134,13 @@ const CarouselTitle = styled.div`
     text-align: left;
     left: 0;
 
-    > h3 {
+    > .title {
       margin-left: 15px;
       color: #333333;
       font-size: 16.72px;
     }
 
-    > p {
+    > .decription {
       margin-left: 15px;
       font-size: 12px;
       color: #333333;
@@ -131,7 +153,11 @@ const CarouselTitle = styled.div`
       background-color: #ececec;
     }
 
-    > span {
+    > .link {
+      text-decoration: none;
+    }
+
+    > .link > span {
       margin-top: 15px;
       color: #3366ff;
       font-size: 12px;
@@ -152,13 +178,13 @@ const CarouselTitle = styled.div`
     text-align: left;
     left: 0;
 
-    > h3 {
+    > .title {
       margin-left: 15px;
       color: #333333;
       font-size: 14.72px;
     }
 
-    > p {
+    > .description {
       margin-left: 15px;
       font-size: 10px;
       color: #333333;
@@ -171,7 +197,11 @@ const CarouselTitle = styled.div`
       background-color: #ececec;
     }
 
-    > span {
+    > .link {
+      text-decoration: none;
+    }
+
+    > .link > span {
       margin-top: 15px;
       color: #3366ff;
       font-size: 10px;
@@ -184,6 +214,7 @@ const CarouselTitle = styled.div`
   }
 `;
 
+// 버튼
 const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
   @media all and (min-width: 1200px) {
     position: absolute;
@@ -602,24 +633,26 @@ const Carousel: React.FC = () => {
         >
           <img src={banner.img} alt="banner" />
           <CarouselTitle>
-            <h3>{banner.title}</h3>
-            <p>{banner.description}</p>
+            <h3 className="title">{banner.title}</h3>
+            <p className="description">{banner.description}</p>
             <hr />
-            <span>
-              바로가기
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="SvgIcon_SvgIcon__root__svg__DKYBi"
-                viewBox="0 0 18 18"
-                width="18"
-                height="18"
-              >
-                <path
-                  d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"
-                  fill="#3366FF"
-                ></path>
-              </svg>
-            </span>
+            <a href="#" className="link">
+              <span>
+                바로가기
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="SvgIcon_SvgIcon__root__svg__DKYBi"
+                  viewBox="0 0 18 18"
+                  width="18"
+                  height="18"
+                >
+                  <path
+                    d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"
+                    fill="#3366FF"
+                  ></path>
+                </svg>
+              </span>
+            </a>
           </CarouselTitle>
         </CarouselItem>
       ))}
