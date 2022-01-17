@@ -218,7 +218,7 @@ const CarouselTitle = styled.div`
 const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
   @media all and (min-width: 1200px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -242,7 +242,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1222px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -266,7 +266,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1277px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -290,7 +290,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1310px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -314,7 +314,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1335px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -338,7 +338,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1368px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -362,7 +362,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1400px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -386,7 +386,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1500px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -410,7 +410,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1534px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -434,7 +434,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1600px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -458,7 +458,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1669px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -482,7 +482,7 @@ const ArrowButton = styled.button<{ position: 'left' | 'right' }>`
 
   @media all and (min-width: 1900px) {
     position: absolute;
-    top: 130px;
+    top: 200px;
     font-size: 16px;
     background-color: transparent;
     border: none;
