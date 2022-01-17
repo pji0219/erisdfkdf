@@ -58,46 +58,48 @@ const CarouselItem = styled.li<{ activeIdx: number }>`
 
 // 배너 제목 및 설명
 const CarouselTitle = styled.div`
-  position: absolute;
-  bottom: 28px;
-  width: 330px;
-  height: 146px;
-  border-radius: 4px;
-  background-color: #fff;
-  text-align: left;
-  left: 34px;
+  @media all and (min-width: 1201px) {
+    position: absolute;
+    bottom: 28px;
+    width: 330px;
+    height: 146px;
+    border-radius: 4px;
+    background-color: #fff;
+    text-align: left;
+    left: 34px;
 
-  > .title {
-    margin-left: 15px;
-    color: #333333;
-  }
+    > .title {
+      margin-left: 15px;
+      color: #333333;
+    }
 
-  > .decription {
-    margin-left: 15px;
-    font-size: 14px;
-    color: #333333;
-  }
+    > .decription {
+      margin-left: 15px;
+      font-size: 12px;
+      color: #333333;
+    }
 
-  > hr {
-    height: 1px;
-    margin: 0;
-    border: none;
-    background-color: #ececec;
-  }
+    > hr {
+      height: 1px;
+      margin: 0;
+      border: none;
+      background-color: #ececec;
+    }
 
-  > .link {
-    text-decoration: none;
-  }
+    > .link {
+      text-decoration: none;
+    }
 
-  > .link > span {
-    margin-top: 15px;
-    color: #3366ff;
-    font-size: 14px;
-    margin-left: 15px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    line-height: 1;
+    > .link > span {
+      margin-top: 15px;
+      color: #3366ff;
+      font-size: 14px;
+      margin-left: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+    }
   }
 
   @media all and (max-width: 1200px) {
@@ -108,6 +110,24 @@ const CarouselTitle = styled.div`
     background-color: #fff;
     text-align: left;
     left: 0;
+  }
+
+  > .title {
+    margin-left: 15px;
+    color: #333333;
+  }
+
+  > .decription {
+    margin-left: 15px;
+    font-size: 12px;
+    color: #333333;
+  }
+
+  > hr {
+    height: 1px;
+    margin: 0;
+    border: none;
+    background-color: #ececec;
   }
 
   > .link {
